@@ -1,13 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
- name: service
- labels:
-   app: myapp
-spec:
- selector:
+  name: myapp-service
+  namespace: dev
+  labels:
     app: myapp
- ports:
+spec:
+  selector:
+    app: myapp
+  ports:
     - protocol: TCP
       port: 80
       targetPort: 8888
