@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: myapp-service
   labels:
-    app: myapp
+    app: myapp-service
 spec:
   type: LoadBalancer
   selector:
-    app: myapp
+    app: myapp-service
   ports:
     - protocol: TCP
       port: 8888
